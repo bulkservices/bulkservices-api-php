@@ -31,5 +31,4 @@ nb-configuration.xml
 
 build
 composer.lock
-docs
 vendor

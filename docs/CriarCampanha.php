@@ -2,9 +2,9 @@
 /**
  * CriarCampanha.php
  *
- * Exemplo de como realizar a criação de uma campanha na API Bulkservices 
- * utilizando cURL. 
- * 
+ * Exemplo de como realizar a criação de uma campanha na API Bulkservices
+ * utilizando cURL.
+ *
  * http://php.net/manual/en/book.curl.php
  *
  * Endpoint:
@@ -12,10 +12,10 @@
  */
 
 //formato inicial dos dados para envio
-$postData = [    
+$postData = [
     "name"=> "Nome da campanha",
     "message"=> "Mensagem a ser enviada para os participantes da campanha",
-    "media_message"=> "false",
+    "media_message"=> "true",
     "send_date"=> "2021-2-16 11:00",
     "method"=> "whatsapp",
     "recipients"=> [
@@ -48,7 +48,7 @@ $curlHandler = curl_init($url);
 
 /**
  * Configura as opcoes de envio para a transferencia CURL,sendo:
- * 
+ *
  * - CURLOPT_POSTFIELDS: Campos a serem enviados via POST
  * - CURLOPT_HTTPHEADER: Header da requisição
  * - CURLOPT_RETURNTRANSFER: TRUE para retornar como string o resultado da requisicao

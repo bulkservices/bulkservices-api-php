@@ -2,9 +2,9 @@
 /**
  * AnexarImagemCampanha.php
  *
- * Exemplo de como anexar imagem a uma campanha na API Bulkservices 
- * utilizando cURL. 
- * 
+ * Exemplo de como anexar imagem a uma campanha na API Bulkservices
+ * utilizando cURL.
+ *
  * http://php.net/manual/en/book.curl.php
  *
  * Endpoint:
@@ -13,12 +13,12 @@
 
 /**
  * Cria um objeto CURLFile
- * 
+ *
  * http://php.net/manual/en/curlfile.construct.php
  * new CURLFile('filename','mimetype','postname')
  */
 
-$file = new CURLFile(dirname(__FILE__).'/mario.jpg','image/jpeg','media_file');
+$file = new CURLFile(dirname(__FILE__).'/mario.jpg','image/jpeg','mario.jpg');
 $mediaType = 'image';
 
 //formato inicial dos dados para envio
@@ -41,7 +41,7 @@ $curlHandler = curl_init($url);
 
 /**
  * Configura as opcoes de envio para a transferencia CURL,sendo:
- * 
+ *
  * - CURLOPT_POSTFIELDS: Campos a serem enviados via POST
  * - CURLOPT_RETURNTRANSFER: TRUE para retornar como string o resultado da requisicao
  */
